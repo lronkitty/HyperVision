@@ -1,13 +1,3 @@
----
-license: apache-2.0
-tags:
-- vision
-- hyperspectral
-- foundation-model
-- image-segmentation
-pipeline_tag: image-segmentation
----
-
 # HyperVision: Channel-Adaptive Ground-Based Hyperspectral Vision Foundation Models
 
 *This is the official repository for the paper "HyperVision: Channel-Adaptive Ground-Based Hyperspectral Vision Foundation Models".* 
