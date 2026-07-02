@@ -1,3 +1,13 @@
+---
+license: apache-2.0
+tags:
+- vision
+- hyperspectral
+- foundation-model
+- image-segmentation
+pipeline_tag: image-segmentation
+---
+
 # HyperVision: Channel-Adaptive Ground-Based Hyperspectral Vision Foundation Models
 
 *This is the official repository for the paper "HyperVision: Channel-Adaptive Ground-Based Hyperspectral Vision Foundation Models".* 
@@ -95,39 +105,39 @@ python hyperspectral_image_reader/read_dataset_image.py --path /path/to/image.ma
 
 Below is a summary of the ground-based hyperspectral datasets supported by our pipeline, along with their respective keys to be used for the `--dataset` parameter:
 
-| Dataset Name | `--dataset` Key | # Bands | Wavelengths | # Images | Expected Extension | <div style="min-width: 350px;">File Loader Detail / Required Accompanying Files</div> |
+| Dataset Name | `--dataset` Key | # Bands | Wavelengths | # Images | Expected Extension | File Loader Detail / Required Accompanying Files |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **50 Outdoor** | `fiftyoutdoor` | 33 | 400–720 nm | 50 | `.mat` | <small>Custom Mat loader</small> |
-| **Agricultural Plant** | `aphid` | 237 | 436–965 nm | 361 | `.npy` | <small>NumPy array loader</small> |
-| **ARAD1K16** | `arad_1k_16` | 16 | 400–1000 nm | 950 | `.mat` | <small>HDF5 H5PY loader</small> |
-| **ARAD1K31** | `arad_1k_31` | 31 | 400–700 nm | 949 | `.mat` | <small>HDF5 H5PY loader</small> |
-| **CAVE** | `cave` | 31 | 400–700 nm | 32 | `.mat` | <small>Mat loader</small> |
-| **DeepHS-NIR** | `deephsnir` | 252 | 950–1700 nm | 718 | `.bin` | <small>ENVI binary (requires corresponding `.hdr` file in the same directory)</small> |
-| **DeepHS-VIS** | `deephsvis` | 224 | 400–1000 nm | 3405 | `.bin` | <small>ENVI binary (requires corresponding `.hdr` file in the same directory)</small> |
-| **DeepHS-VISCOR** | `deephsviscor` | 249 | 400–1000 nm | 1566 | `.bin` | <small>ENVI binary (requires corresponding `.hdr` file in the same directory)</small> |
-| **Harvard** | `harvard` | 31 | 420–720 nm | 77 | `.mat` | <small>Mat loader</small> |
-| **HOT-2024-NIR** | `hotnir` | 25 | 665–960 nm | 477 | `.png` | <small>PNG frame loader (requires corresponding false-color `.jpg` file)</small> |
-| **HOT-2024-RedNIR** | `hotrednir` | 15 | 600–850 nm | 348 | `.png` | <small>PNG frame loader (requires corresponding false-color `.jpg` file)</small> |
-| **HOT-2024-VIS** | `hotvis` | 16 | 470–600 nm | 1070 | `.png` | <small>PNG frame loader (requires corresponding false-color `.jpg` file)</small> |
-| **HSI Drive v2.0** | `hsidrive20` | 25 | 600–975 nm | 752 | `.npy` | <small>NumPy loader (requires corresponding pseudocolor `.png` file)</small> |
-| **HSI Road** | `hsiroad` | 25 | 600–960 nm | 380 | `.tif` | <small>TIF image loader</small> |
-| **HSODBIT v2** | `hsodbitv2` | 200 | 400–1000 nm | 500 | `.mat` | <small>HDF5 H5PY loader (requires corresponding color `.jpg` file)</small> |
-| **HSSOD** | `hs_sod` | 81 | 380–720 nm | 60 | `.h5` | <small>HDF5 H5PY loader (requires corresponding color `.jpg` file)</small> |
-| **HyKo v2-NIR** | `hykov2nir` | 25 | 600–975 nm | 78 | `.mat` | <small>Mat loader</small> |
-| **HyKo v2-VIS** | `hykov2vis` | 16 | 470–630 nm | 163 | `.mat` | <small>Mat loader</small> |
-| **HyperBlood** | `hyperblood` | 128 | 377–1046 nm | 14 | `.mat` | <small>Custom Mat loader</small> |
-| **HyperDrive-VNIR** | `hyperdrivevnir` | 24 | 660–900 nm | 504 | `.npz` | <small>NumPy archive (must contain `cube.npy` file inside)</small> |
-| **HyperspectralCity v2** | `hyperspectralcityv2` | 128 | 450–950 nm | 1330 | `.hsd` | <small>HSD raw data loader</small> |
-| **ICVL** | `icvl` | 31 | 400–700 nm | 187 | `.h5` | <small>HDF5 H5PY loader</small> |
-| **LIB-HSI** | `libhsi` | 204 | 400–1000 nm | 393 | `.hdr` | <small>ENVI header (requires corresponding raw binary data `.raw`/`.dat` file)</small> |
-| **UM-EMM** | `umemm` | 33 | 400–720 nm | 3 | `.mat` | <small>Mat loader</small> |
-| **UM-LD 2015** | `umld2015` | 33 | 400–720 nm | 20 | `.mat` | <small>Mat loader</small> |
-| **UM-NS 2002** | `umns2002` | 31 | 410–710 nm | 8 | `.mat` | <small>Mat loader</small> |
-| **UM-NS 2004** | `umns2004` | 33 | 400–720 nm | 10 | `.mat` | <small>Mat loader</small> |
-| **UM-OS** | `umos` | 33 | 400–720 nm | 50 | `.mat` | <small>Mat loader</small> |
-| **UM-RI 2015** | `umri2015` | 33 | 400–720 nm | 33 | `.mat` | <small>Mat loader</small> |
-| **Virginia Tech Tree** | `virginia_tech_tree` | 420 | 400–1000 nm | 51 | `.hdr` | <small>ENVI header (requires corresponding raw binary data file)</small> |
-| **Apple Fire Blight** | `vnihdhiatlimafb` | 204 | 400–1000 nm | 420 | `.hdr` | <small>ENVI header (requires corresponding raw binary data file)</small> |
+| **50 Outdoor** | `fiftyoutdoor` | 33 | 400–720 nm | 50 | `.mat` | Custom Mat loader |
+| **Agricultural Plant** | `aphid` | 237 | 436–965 nm | 361 | `.npy` | NumPy array loader |
+| **ARAD1K16** | `arad_1k_16` | 16 | 400–1000 nm | 950 | `.mat` | HDF5 H5PY loader |
+| **ARAD1K31** | `arad_1k_31` | 31 | 400–700 nm | 949 | `.mat` | HDF5 H5PY loader |
+| **CAVE** | `cave` | 31 | 400–700 nm | 32 | `.mat` | Mat loader |
+| **DeepHS-NIR** | `deephsnir` | 252 | 950–1700 nm | 718 | `.bin` | ENVI binary (requires corresponding `.hdr` file in the same directory) |
+| **DeepHS-VIS** | `deephsvis` | 224 | 400–1000 nm | 3405 | `.bin` | ENVI binary (requires corresponding `.hdr` file in the same directory) |
+| **DeepHS-VISCOR** | `deephsviscor` | 249 | 400–1000 nm | 1566 | `.bin` | ENVI binary (requires corresponding `.hdr` file in the same directory) |
+| **Harvard** | `harvard` | 31 | 420–720 nm | 77 | `.mat` | Mat loader |
+| **HOT-2024-NIR** | `hotnir` | 25 | 665–960 nm | 477 | `.png` | PNG frame loader (requires corresponding false-color `.jpg` file) |
+| **HOT-2024-RedNIR** | `hotrednir` | 15 | 600–850 nm | 348 | `.png` | PNG frame loader (requires corresponding false-color `.jpg` file) |
+| **HOT-2024-VIS** | `hotvis` | 16 | 470–600 nm | 1070 | `.png` | PNG frame loader (requires corresponding false-color `.jpg` file) |
+| **HSI Drive v2.0** | `hsidrive20` | 25 | 600–975 nm | 752 | `.npy` | NumPy loader (requires corresponding pseudocolor `.png` file) |
+| **HSI Road** | `hsiroad` | 25 | 600–960 nm | 380 | `.tif` | TIF image loader |
+| **HSODBIT v2** | `hsodbitv2` | 200 | 400–1000 nm | 500 | `.mat` | HDF5 H5PY loader (requires corresponding color `.jpg` file) |
+| **HSSOD** | `hs_sod` | 81 | 380–720 nm | 60 | `.h5` | HDF5 H5PY loader (requires corresponding color `.jpg` file) |
+| **HyKo v2-NIR** | `hykov2nir` | 25 | 600–975 nm | 78 | `.mat` | Mat loader |
+| **HyKo v2-VIS** | `hykov2vis` | 16 | 470–630 nm | 163 | `.mat` | Mat loader |
+| **HyperBlood** | `hyperblood` | 128 | 377–1046 nm | 14 | `.mat` | Custom Mat loader |
+| **HyperDrive-VNIR** | `hyperdrivevnir` | 24 | 660–900 nm | 504 | `.npz` | NumPy archive (must contain `cube.npy` file inside) |
+| **HyperspectralCity v2** | `hyperspectralcityv2` | 128 | 450–950 nm | 1330 | `.hsd` | HSD raw data loader |
+| **ICVL** | `icvl` | 31 | 400–700 nm | 187 | `.h5` | HDF5 H5PY loader |
+| **LIB-HSI** | `libhsi` | 204 | 400–1000 nm | 393 | `.hdr` | ENVI header (requires corresponding raw binary data `.raw`/`.dat` file) |
+| **UM-EMM** | `umemm` | 33 | 400–720 nm | 3 | `.mat` | Mat loader |
+| **UM-LD 2015** | `umld2015` | 33 | 400–720 nm | 20 | `.mat` | Mat loader |
+| **UM-NS 2002** | `umns2002` | 31 | 410–710 nm | 8 | `.mat` | Mat loader |
+| **UM-NS 2004** | `umns2004` | 33 | 400–720 nm | 10 | `.mat` | Mat loader |
+| **UM-OS** | `umos` | 33 | 400–720 nm | 50 | `.mat` | Mat loader |
+| **UM-RI 2015** | `umri2015` | 33 | 400–720 nm | 33 | `.mat` | Mat loader |
+| **Virginia Tech Tree** | `virginia_tech_tree` | 420 | 400–1000 nm | 51 | `.hdr` | ENVI header (requires corresponding raw binary data file) |
+| **Apple Fire Blight** | `vnihdhiatlimafb` | 204 | 400–1000 nm | 420 | `.hdr` | ENVI header (requires corresponding raw binary data file) |
 
 ---
 
