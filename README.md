@@ -138,7 +138,7 @@ If you find our work or this project helpful, please consider citing our paper:
 ```bibtex
 @misc{fu2026hypervision,
       title={HyperVision: A Channel-Adaptive Ground-Based Hyperspectral Vision Pre-trained Backbone}, 
-      author={Guanyiman Fu and Jingtao Li and Zihang Cheng and Zhuanfeng Li and Diqi Chen and Yan Xu and Fengchao Xiong and Jianfeng Lu and Jun Zhou},
+      author={Guanyiman Fu and Jingtao Li and Zihang Cheng and Zhuanfeng Li and Diqi Chen and Yan Xu and Xiangyu Liu and Fengchao Xiong and Jianfeng Lu and Chengrong Chen and Jun Zhou},
       year={2026},
       eprint={2605.17286},
       archivePrefix={arXiv},
