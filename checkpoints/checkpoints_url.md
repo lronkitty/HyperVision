@@ -1,0 +1,1 @@
+https://huggingface.co/IronKitty/HyperVision/tree/main/checkpoints
