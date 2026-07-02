@@ -95,7 +95,7 @@ python hyperspectral_image_reader/read_dataset_image.py --path /path/to/image.ma
 
 Below is a summary of the ground-based hyperspectral datasets supported by our pipeline, along with their respective keys to be used for the `--dataset` parameter:
 
-| Dataset Name | `--dataset` Key | # Bands | Wavelengths | # Images | Expected Extension | File&nbsp;Loader&nbsp;Detail&nbsp;/&nbsp;Required&nbsp;Accompanying&nbsp;Files |
+| Dataset Name | `--dataset` Key | # Bands | Wavelengths | # Images | Expected Extension | <div style="min-width: 350px;">File Loader Detail / Required Accompanying Files</div> |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
 | **50 Outdoor** | `fiftyoutdoor` | 33 | 400–720 nm | 50 | `.mat` | <small>Custom Mat loader</small> |
 | **Agricultural Plant** | `aphid` | 237 | 436–965 nm | 361 | `.npy` | <small>NumPy array loader</small> |
