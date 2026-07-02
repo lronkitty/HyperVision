@@ -6,7 +6,7 @@ https://arxiv.org/abs/2605.17286
 ---
 
 🚀 **News:**
-- **[Coming Soon]** We will soon open-source the official implementation and pre-trained foundation models! Please stay tuned!
+- **[2026-07-02]** Pre-trained checkpoints are now available! You can download them from [Hugging Face Checkpoints](https://huggingface.co/IronKitty/HyperVision/tree/main/checkpoints).
 
 ---
 
@@ -18,7 +18,9 @@ While hyperspectral imaging provides rich spatial-spectral information across hu
 
 The core architecture and model initialization utilities are located under the [HyperVision](./HyperVision) directory. 
 
-To initialize the model, you can use the model builder functions from [HyperVision/build_HyperVision.py](./HyperVision/build_HyperVision.py). We support different model configurations:
+To initialize the model, you can use the model builder functions from [HyperVision/build_HyperVision.py](./HyperVision/build_HyperVision.py). The pre-trained checkpoints can be downloaded from [Hugging Face Checkpoints](https://huggingface.co/IronKitty/HyperVision/tree/main/checkpoints).
+
+We support different model configurations:
 - **HyperVision-B**: `build_HyperVision_b`
 - **HyperVision-L**: `build_HyperVision_l`
 - **HyperVision-H** (Default): `build_HyperVision_h`
