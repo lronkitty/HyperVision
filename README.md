@@ -1,4 +1,5 @@
 # HyperVision: Channel-Adaptive Ground-Based Hyperspectral Vision Foundation Models
+# Hyperspectral Images Reader with multiple dataset support.
 
 *This is the official repository for the paper "HyperVision: Channel-Adaptive Ground-Based Hyperspectral Vision Foundation Models".* 
 https://arxiv.org/abs/2605.17286
