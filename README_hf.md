@@ -1,8 +1,20 @@
+---
+license: apache-2.0
+pipeline_tag: image-feature-extraction
+tags:
+- vision
+- hyperspectral
+- foundation-model
+- image-segmentation
+---
 # HyperVision: A Channel-Adaptive Ground-Based Hyperspectral Vision Pre-trained Backbone
-*This is the official repository for the paper "HyperVision: A Channel-Adaptive Ground-Based Hyperspectral Vision Pre-trained Backbone".* 
+
+*This is the official repository for the paper "HyperVision: A Channel-Adaptive Ground-Based Hyperspectral Vision Pre-trained Backbone".*
 https://arxiv.org/abs/2605.17286
 
 and **Hyperspectral Images Reader with multiple dataset support.**
+
+**Code:** [https://github.com/lronkitty/HyperVision](https://github.com/lronkitty/HyperVision)
 
 [![BMVC 2026](https://img.shields.io/badge/BMVC-2026-blue.svg)](https://bmvc2026.bmva.org/)
 [![Paper Status](<https://img.shields.io/badge/Status-Accepted%20to%20BMVC%202026-success.svg>)](https://bmvc2026.bmva.org/)

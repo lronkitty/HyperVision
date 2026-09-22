@@ -12,10 +12,13 @@ if parent_dir not in sys.path:
     sys.path.append(parent_dir)
 
 try:
-    from hyperspectral_pipelines import LoadHyperspectralImage
-except ImportError as e:
-    print(f"Error: Could not import LoadHyperspectralImage. Detail: {e}")
-    sys.exit(1)
+    from hyperspectral_image_reader.hyperspectral_pipelines import LoadHyperspectralImage
+except ImportError:
+    try:
+        from hyperspectral_pipelines import LoadHyperspectralImage
+    except ImportError as e:
+        print(f"Error: Could not import LoadHyperspectralImage. Detail: {e}")
+        sys.exit(1)
 
 DATASET_EXTENSIONS = {
     # .mat / .h5 formats

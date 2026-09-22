@@ -28,8 +28,16 @@ import rasterio
 import spectral.io.envi as envi
 import tifffile
 import random
-from configs.hypervision import ds_load
-from configs.hypervision.hsi3d import get_image_loader
+try:
+    from hyperspectral_image_reader.utils import ds_load
+    from hyperspectral_image_reader.utils.hsi3d import get_image_loader
+except ImportError:
+    try:
+        from .utils import ds_load
+        from .utils.hsi3d import get_image_loader
+    except (ImportError, ValueError):
+        from utils import ds_load
+        from utils.hsi3d import get_image_loader
 import cupy as cp
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple, Union
 import logging
